@@ -1,0 +1,72 @@
+
+.farhan-image-and-information{
+  display: flex;
+  flex-direction: row;
+  margin-top: 100px;
+  margin-left: 350px;
+}
+.farhan-information{
+  color: white;
+  padding: 15px;
+  width: 50%;
+  margin-top: 50px;
+}
+.farhan-information h1 {
+  display: flex;
+  flex-direction: row;
+}
+.farhan-Name-block{
+  display: flex;
+  flex-direction: column;
+}
+.farhan-Name{
+  font-size: 29px;
+  font-weight: 700;
+}
+.word-break{
+  word-break: break-word;  
+}
+
+/* Responsiveness */
+@media only screen and (max-width: 1440px) {
+  .farhan-image-and-information{
+    margin-top: 120px;
+    margin-left: 250px;
+  }
+}
+@media only screen and (max-width: 1024px) {
+  .farhan-image-and-information{
+    margin-top: 120px;
+    margin-left: 50px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .farhan-image-and-information{
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 0px;
+    align-items: center;
+  }
+  .farhan-information{
+    width: 80%;
+    text-align: center;
+    margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 425px) {
+  .farhan-image-and-information{
+    flex-direction: column;
+    margin-top: 50px;
+    margin-left: 0px;
+    align-items: center;
+  }
+  .farhan-information{
+    font-size: 16px;
+    text-align: center;
+    width: 88%;
+    margin-top: 10px;
+  }
+  .farhan-information h1 {
+    text-align: center;
+  }
+}

@@ -1,0 +1,48 @@
+.wrapper{
+    perspective: 1400px;
+}
+.box-area{
+    transform-style: preserve-3d;
+    animation-name: rotate;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+@keyframes rotate{
+    0%{
+        transform: rotate3d(0,0,0,0);
+    }
+    100%{
+        transform: rotate3d(0,1,0,360deg);
+    }
+}
+.box{
+    position:absolute;
+    width: 250px;
+    height: 250px;
+    border: .2px solid #e0dfdd5d;
+    background-color: #e8eaeb7a;
+}
+
+.box-front{
+    transform: translateX(-125px) translateY(-125px) translateZ(125px);
+}
+.box-back{
+    transform: translateX(-125px) translateY(-125px) translateZ(-125px);
+}
+.box-right{
+    transform: translateY(-125px) rotateY(90deg);
+}
+.box-left{
+    transform: translateY(-125px) translateX(-250px) rotateY(90deg);
+}
+.box-top{
+    transform: translateX(-125px) translateY(-250px) rotateX(90deg);
+}
+.box-bottom{
+    transform: translateX(-125px) rotateX(90deg);
+}
+
+.box-area{
+    transform: rotateX(90deg) rotateY(90deg);
+}

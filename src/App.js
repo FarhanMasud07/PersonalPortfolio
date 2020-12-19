@@ -1,24 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import MyportfolioDefault from './components/portfolio/myportfolioDefault'
+import './App.css'
+import Nav from './components/shared/nav'
+import Resume from './components/Resume/Resume'
+import {AnimatePresence} from 'framer-motion'
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch,
+} from "react-router-dom";
+function App(props) {
+  // let className = props.isDarkMode? 'primary': 'notprimary'
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Router>
+      <Nav/>
+      <AnimatePresence>
+        <Switch>
+          <Route path='/' exact component = {MyportfolioDefault}/>
+          <Route path='/Resume' component = {Resume}/>
+        </Switch>
+      </AnimatePresence>
+    </Router>
+    </>
   );
 }
 
